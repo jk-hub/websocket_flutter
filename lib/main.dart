@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_socket_channel/io.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
-import 'package:web_socket_channel/status.dart' as status;
+import 'package:web_socket_demo/chat.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,12 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(
-        title: 'Flutter Demo Home Page',
-        channel: IOWebSocketChannel.connect(
-          'wss://echo.websocket.org/',
-        ),
-      ),
+      home: ChatPage(),
     );
   }
 }
